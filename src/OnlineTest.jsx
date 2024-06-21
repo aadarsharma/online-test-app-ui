@@ -25,7 +25,6 @@ const OnlineTest = () => {
   };
 
   const handleSaveAndNext = () => {
-    // Logic to save answer and move to next question
     setQuestionStatus((prevStatus) => {
       const newStatus = [...prevStatus];
       newStatus[currentQuestion.id - 1] = true;
@@ -41,7 +40,7 @@ const OnlineTest = () => {
       </div>
       <div className="time-left">Time Left: {formatTime(timeLeft)}</div>
       <div className="test-content">
-        <div className="question-section">
+        <div className="content-box question-section">
           <h2>Question</h2>
           <p>{currentQuestion.text}</p>
           {currentQuestion.options.map((option, index) => (
@@ -55,7 +54,7 @@ const OnlineTest = () => {
             <button className="save-next-button" onClick={handleSaveAndNext}>Save & Next →</button>
           </div>
         </div>
-        <div className="questions-status">
+        <div className="content-box questions-status">
           <h2>Questions Status</h2>
           <div className="status-grid">
             {questionStatus.map((status, index) => (
