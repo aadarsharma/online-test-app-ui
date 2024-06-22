@@ -52,6 +52,7 @@ const OnlineTest = () => {
                 {option}
               </label>
             ))}
+            <p className='pad'></p>
           </div>
           <div className="button-group">
               <div></div>
