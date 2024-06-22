@@ -51,11 +51,16 @@ const OnlineTest = () => {
               </label>
             ))}
           </div>
-          <div className="button-group">
-            <div className='component center-content'>
-              <button className="skip-button">Skip</button>
-            </div>
-            <button className="save-next-button" onClick={handleSaveAndNext}>Save & Next →</button>              
+          <div className="button-group div-center">
+              <div>
+                
+              </div>
+              <div>
+                <button className="skip-button">Skip</button>
+              </div>
+              <div className='div-right'>
+                <button className="save-next-button" onClick={handleSaveAndNext}>Save & Next →</button>
+              </div>
           </div>
         </div>
         <div>

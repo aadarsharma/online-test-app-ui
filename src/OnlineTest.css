@@ -40,6 +40,18 @@
   padding-left: 10px;
 }
 
+.div-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-right {
+  display: flex;
+  justify-content: right;
+  align-items: right;
+}
+
 .bg-color-400 {
   background-color: #f0f0f0;
 }
@@ -48,7 +60,7 @@
   text-align: right;
 }
 
-.component .center-content {
+.center-content {
   display: flex;
   justify-content: center; /* Horizontally center */
   align-items: center; /* Vertically center */
