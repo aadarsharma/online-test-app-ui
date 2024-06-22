@@ -44,7 +44,7 @@ const OnlineTest = () => {
       <div className="test-content">
         <div className='column'>
           <div className="content-box question-section">
-          <div className='bg-white'>
+          <div>
             <h3 className='p11'>Questions</h3>
           </div>
             <p>{currentQuestion.id}. {currentQuestion.text}</p>
