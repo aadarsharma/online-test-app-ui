@@ -40,7 +40,7 @@ const OnlineTest = () => {
       <div className="progress-bar">
         <div className="progress" style={{ width: `${(2700 - timeLeft) / 27}%` }}></div>
       </div>
-      <div className="time-left p10">⏲ Time Left: {formatTime(timeLeft)}</div>
+      <div className="time-left p10">🕘 Time Left: {formatTime(timeLeft)}</div>
       <div className="test-content">
         <div className='column'>
           <div className="content-box question-section">
