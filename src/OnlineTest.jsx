@@ -34,39 +34,47 @@ const OnlineTest = () => {
 
   return (
     <div className="online-test">
-      <h1>Online Test</h1>
+      <h1 className="text-align-right">Online Test</h1>
       <div className="progress-bar">
         <div className="progress" style={{ width: `${(2700 - timeLeft) / 27}%` }}></div>
       </div>
-      <div className="time-left">Time Left: {formatTime(timeLeft)}</div>
+      <div className="time-left">⏲ Time Left: {formatTime(timeLeft)}</div>
       <div className="test-content">
-        <div className="content-box question-section">
-          <h2>Question</h2>
-          <p>{currentQuestion.text}</p>
-          {currentQuestion.options.map((option, index) => (
-            <label key={index} className="option">
-              <input type="radio" name="answer" value={option} />
-              {option}
-            </label>
-          ))}
+        <div>
+          <div className="content-box question-section">
+            <h2>Question</h2>
+            <p>{currentQuestion.text}</p>
+            {currentQuestion.options.map((option, index) => (
+              <label key={index} className="option">
+                <input type="radio" name="answer" value={option} />
+                {option}
+              </label>
+            ))}
+          </div>
           <div className="button-group">
-            <button className="skip-button">Skip</button>
-            <button className="save-next-button" onClick={handleSaveAndNext}>Save & Next →</button>
+            <div className='component center-content'>
+              <button className="skip-button">Skip</button>
+            </div>
+            <button className="save-next-button" onClick={handleSaveAndNext}>Save & Next →</button>              
           </div>
         </div>
-        <div className="content-box questions-status">
-          <h2>Questions Status</h2>
-          <div className="status-grid">
-            {questionStatus.map((status, index) => (
-              <div key={index} className={`status-item ${status ? 'attempted' : ''}`}>
-                {index + 1}
-              </div>
-            ))}
+        <div>
+          <div className='content-box1 bg-color-400'>
+              <h2 className='bg-color-400'>Questions Status</h2>
+          </div>
+          <div className="content-box questions-status">
+            <div className="status-grid">
+              {questionStatus.map((status, index) => (
+                <div key={index} className={`status-item ${status ? 'attempted' : ''}`}>
+                  {index + 1}
+                </div>
+              ))}
+            </div>
           </div>
           <div className="status-legend">
             <div className="legend-item">
               <div className="legend-color attempted"></div>
-              <span>Attempted</span>
+                <span>Attempted</span>
             </div>
             <div className="legend-item">
               <div className="legend-color not-attempted"></div>

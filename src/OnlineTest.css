@@ -30,9 +30,29 @@
 .content-box {
   background-color: #fff;
   border: 1px solid #e0e0e0;
-  border-radius: 4px;
   padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content-box1 {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 0px;
+  padding-left: 10px;
+}
+
+.bg-color-400 {
+  background-color: #f0f0f0;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.component .center-content {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  height: 100%; /* Ensure the container has a height to allow vertical centering */
 }
 
 .question-section {
