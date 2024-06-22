@@ -67,7 +67,7 @@ const OnlineTest = () => {
         <div>
           <div>
           <div className='content-box1 bg-color-400'>
-              <h2 className='bg-color-400'>Questions Status</h2>
+              <p className='bg-color-400 p1'>Questions Status</p>
           </div>
           <div className="content-box questions-status">
             <div className="status-grid">
