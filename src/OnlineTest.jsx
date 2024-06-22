@@ -33,6 +33,8 @@ const OnlineTest = () => {
   };
 
   return (
+    <div className='flex-container'>
+      <div></div>
     <div className="online-test">
       <h1 className="text-align-right">Online Test</h1>
       <div className="progress-bar">
@@ -40,10 +42,10 @@ const OnlineTest = () => {
       </div>
       <div className="time-left">⏲ Time Left: {formatTime(timeLeft)}</div>
       <div className="test-content">
-        <div>
+        <div className='column'>
           <div className="content-box question-section">
-            <h2>Question</h2>
-            <p>{currentQuestion.text}</p>
+            <h3>Question</h3>
+            <p>{currentQuestion.id}. {currentQuestion.text}</p>
             {currentQuestion.options.map((option, index) => (
               <label key={index} className="option">
                 <input type="radio" name="answer" value={option} />
@@ -51,19 +53,18 @@ const OnlineTest = () => {
               </label>
             ))}
           </div>
-          <div className="button-group div-center">
-              <div>
-                
-              </div>
+          <div className="button-group">
+              <div></div>
               <div>
                 <button className="skip-button">Skip</button>
               </div>
-              <div className='div-right'>
+              <div>
                 <button className="save-next-button" onClick={handleSaveAndNext}>Save & Next →</button>
               </div>
           </div>
         </div>
         <div>
+          <div>
           <div className='content-box1 bg-color-400'>
               <h2 className='bg-color-400'>Questions Status</h2>
           </div>
@@ -71,7 +72,9 @@ const OnlineTest = () => {
             <div className="status-grid">
               {questionStatus.map((status, index) => (
                 <div key={index} className={`status-item ${status ? 'attempted' : ''}`}>
-                  {index + 1}
+                  <div className='padding'>
+                    {index + 1}
+                  </div>
                 </div>
               ))}
             </div>
@@ -87,6 +90,8 @@ const OnlineTest = () => {
             </div>
           </div>
         </div>
+        </div>
+      </div>
       </div>
     </div>
   );

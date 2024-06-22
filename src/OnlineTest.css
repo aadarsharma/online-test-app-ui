@@ -52,6 +52,10 @@
   align-items: right;
 }
 
+.width {
+  width: 100%;
+}
+
 .bg-color-400 {
   background-color: #f0f0f0;
 }
@@ -102,6 +106,10 @@
   flex: 1;
 }
 
+.padding{
+  padding: 3px;
+}
+
 .status-grid {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
@@ -141,6 +149,26 @@
 
 .legend-color.attempted {
   background-color: #007bff;
+}
+
+.flex-container{
+	width: 80%;
+	min-height: 300px;
+	margin: 0 auto;
+	display: -webkit-flex; /* Safari */		
+	display: flex; /* Standard syntax */
+}
+
+.flex-container .column{
+	padding: 10px;
+	-webkit-flex: 1; /* Safari */
+	-ms-flex: 1; /* IE 10 */
+	flex: 1; /* Standard syntax */
+}
+
+h3 {
+  padding: 0;
+  margin-top: -30px;
 }
 
 .legend-color.not-attempted {
