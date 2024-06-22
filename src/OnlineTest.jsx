@@ -36,15 +36,17 @@ const OnlineTest = () => {
     <div className='flex-container'>
       <div></div>
     <div className="online-test">
-      <h1 className="text-align-right">Online Test</h1>
+      <div className="text-align-right p12 py-15">Online Test</div>
       <div className="progress-bar">
         <div className="progress" style={{ width: `${(2700 - timeLeft) / 27}%` }}></div>
       </div>
-      <div className="time-left">⏲ Time Left: {formatTime(timeLeft)}</div>
+      <div className="time-left p10">⏲ Time Left: {formatTime(timeLeft)}</div>
       <div className="test-content">
         <div className='column'>
           <div className="content-box question-section">
-            <h3>Question</h3>
+          <div className='bg-white'>
+            <h3 className='p11'>Questions</h3>
+          </div>
             <p>{currentQuestion.id}. {currentQuestion.text}</p>
             {currentQuestion.options.map((option, index) => (
               <label key={index} className="option">
